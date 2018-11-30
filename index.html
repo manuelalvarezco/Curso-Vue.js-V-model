@@ -13,7 +13,8 @@
 
     <div id="app">
         <h2>Agregar frutas</h2>
-        <input type="text" v-model="nuevaFruta">
+        <input type="text" v-model="nombreFruta" @keyup.enter="agregarFrutas" placeholder="Nombre"><br>
+        <input type="text" v-model="cantidadFruta" @keyup.enter="agregarFrutas" placeholder="Cantidad"><br>
         <button @click="agregarFrutas">Agregar</button>
         <ul>
             <li v-for="fruta of frutas">{{fruta.nombre}} - {{fruta.cantidad}}
